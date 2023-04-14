@@ -120,20 +120,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* ---------- bem blocks ---------- */ /* ---------- header ---------- */
-.header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-/* ---------- footer ---------- */
-.main {
-  padding: 224px 0 0;
-}
-
-/* =================================== intro =================================== */
+/* ---------- bem blocks ---------- */
 .banner {
   display: flex;
   align-items: center;
@@ -234,4 +221,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 .banner__image {
   padding-bottom: 37%;
+}
+
+/* ---------- header ---------- */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* ---------- footer ---------- */
+.main {
+  padding: 224px 0 0;
+}
+
+/* =================================== intro =================================== */
+.intro__banner {
+  margin-bottom: 64px;
 }
