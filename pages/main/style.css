@@ -1,0 +1,237 @@
+/* ---------- support styles ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Roboto;
+}
+
+/* push footer */
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.wrapper .main {
+  flex: 1 1 auto;
+}
+
+[class*=_container] {
+  max-width: 1360px;
+  margin: 0px auto;
+  padding: 0 16px;
+  box-sizing: content-box;
+}
+
+.active,
+.inactive {
+  pointer-events: none;
+  cursor: default;
+}
+
+.banner__image {
+  position: relative;
+}
+.banner__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* ---------- nulling styles ---------- */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 16px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ---------- bem blocks ---------- */ /* ---------- header ---------- */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* ---------- footer ---------- */
+.main {
+  padding: 224px 0 0;
+}
+
+/* =================================== intro =================================== */
+.banner {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.banner_winter {
+  background: url(../../assets/images/main/banner/winter-gradient.png) center no-repeat;
+}
+.banner_winter .banner__title {
+  max-width: 238px;
+  color: #fcfcfd;
+}
+.banner_winter .banner__title::after {
+  background: url(../../assets/images/main/icon/snowflake.png) center no-repeat;
+}
+.banner_winter .banner__text {
+  color: #ffffff;
+}
+.banner_winter .banner__button {
+  color: #ffffff;
+  background: #faa52e;
+}
+.banner_winter .banner__button::after {
+  background: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 11L11 1M11 1H1M11 1V11' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center no-repeat;
+}
+.banner_winter .banner__image {
+  flex: 1 0 52%;
+}
+.banner_summer {
+  background: url(../../assets/images/main/banner/summer-gradient.png) center no-repeat;
+}
+.banner_summer .banner__title {
+  max-width: 234px;
+  color: #101828;
+}
+.banner_summer .banner__title::after {
+  background: url(../../assets/images/main/icon/sun.png) center no-repeat;
+}
+.banner_summer .banner__text {
+  color: #101828;
+}
+.banner_summer .banner__button {
+  color: #ef9415;
+  background: #fff8ef;
+}
+.banner_summer .banner__button::after {
+  background: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 11L11 1M11 1H1M11 1V11' stroke='%23EF9415' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center no-repeat;
+}
+.banner_summer .banner__image {
+  flex: 1 0 48%;
+}
+.banner__content {
+  flex: 1 1 50%;
+  padding-left: 48px;
+}
+.banner__title {
+  height: 44px;
+  padding: 8px 16px;
+  margin-bottom: 8px;
+  display: flex;
+  gap: 8px;
+  font-size: 18px;
+  line-height: 156%;
+  background: rgba(16, 24, 40, 0.1);
+  border-radius: 44px;
+}
+.banner__title::after {
+  content: "";
+  width: 18px;
+}
+.banner__text {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 122%;
+  letter-spacing: -0.02em;
+}
+.banner__text:not(:last-child) {
+  margin-bottom: 24px;
+}
+.banner__button {
+  max-width: 192px;
+  display: flex;
+  padding: 16px 32px;
+  gap: 12px;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  transition: box-shadow 0.3s;
+}
+.banner__button::after {
+  content: "";
+  width: 24px;
+}
+.banner__button:hover {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3647058824);
+}
+.banner__image {
+  padding-bottom: 37%;
+}

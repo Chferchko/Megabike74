@@ -1,0 +1,139 @@
+@import "../../assets/source/support-styles.scss";
+@import "../../assets/source/mixins.scss";
+@import "../../assets/source/samples.scss";
+@import "../../assets/source/null-styles.scss";
+@import "../../assets/source/bem.scss";
+@import "../../assets/source/header.scss";
+@import "../../assets/source/footer.scss";
+
+.main {
+	padding: 224px 0 0;
+}
+
+/* =================================== intro =================================== */
+.intro {
+	&__container {
+	}
+
+	&__banner-slider {
+	}
+
+	&__banner {
+	}
+
+	&__category {
+	}
+}
+
+.banner {
+	display: flex;
+	align-items: center;
+	border-radius: 20px;
+	overflow: hidden;
+	&_winter {
+		background: url(../../assets/images/main/banner/winter-gradient.png) center no-repeat;
+		.banner__title {
+			max-width: 238px;
+			color: #fcfcfd;
+			&::after {
+				background: url(../../assets/images/main/icon/snowflake.png) center no-repeat;
+			}
+		}
+		.banner__text {
+			color: #ffffff;
+		}
+		.banner__button {
+			color: #ffffff;
+			background: #faa52e;
+			&::after {
+				background: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 11L11 1M11 1H1M11 1V11' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+					center no-repeat;
+			}
+		}
+		.banner__image {
+			flex: 1 0 52%;
+		}
+	}
+
+	&_summer {
+		background: url(../../assets/images/main/banner/summer-gradient.png) center no-repeat;
+		.banner__title {
+			max-width: 234px;
+			color: #101828;
+			&::after {
+				background: url(../../assets/images/main/icon/sun.png) center no-repeat;
+			}
+		}
+		.banner__text {
+			color: #101828;
+		}
+		.banner__button {
+			color: #ef9415;
+			background: #fff8ef;
+			&::after {
+				background: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 11L11 1M11 1H1M11 1V11' stroke='%23EF9415' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+					center no-repeat;
+			}
+		}
+		.banner__image {
+			flex: 1 0 48%;
+		}
+	}
+
+	&__content {
+		flex: 1 1 50%;
+		padding-left: 48px;
+	}
+
+	&__title {
+		height: 44px;
+		padding: 8px 16px;
+		margin-bottom: 8px;
+		display: flex;
+		gap: 8px;
+		font-size: 18px;
+		line-height: 156%;
+		background: rgba(16, 24, 40, 0.1);
+		border-radius: 44px;
+		&::after {
+			content: "";
+			width: 18px;
+		}
+	}
+
+	&__text {
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 122%;
+		letter-spacing: -0.02em;
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+
+	&__button {
+		max-width: 192px;
+		display: flex;
+		padding: 16px 32px;
+		gap: 12px;
+		border-radius: 12px;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 120%;
+		transition: box-shadow .3s;
+		&::after {
+			content: "";
+			width: 24px;
+		}
+		&:hover{
+			box-shadow: 0 0 10px 0 #0000005d;
+		}
+	}
+
+	&__image {
+		@extend %adapt-img;
+		padding-bottom: 37%;
+	}
+}
+
+@import "../../assets/source/media.scss";
