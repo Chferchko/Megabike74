@@ -11,6 +11,23 @@
      object-fit: cover;
 }
 
+.form__message, .form__name, .form__phonenumber {
+  padding: 16px;
+  background: #ffffff;
+  border: 2px solid #f2f4f7;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  color: #98a2b3;
+}
+.form__message::-moz-placeholder, .form__name::-moz-placeholder, .form__phonenumber::-moz-placeholder {
+  color: #98a2b3;
+}
+.form__message::placeholder, .form__name::placeholder, .form__phonenumber::placeholder {
+  color: #98a2b3;
+}
+
 /* ---------- support styles ---------- */
 html {
   scroll-behavior: smooth;
@@ -84,6 +101,9 @@ html, body {
 
 input, button, textarea {
   font-family: inherit;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 input::-ms-clear {
@@ -376,6 +396,45 @@ h1, h2, h3, h4, h5, h6 {
   color: #101828;
 }
 
+.form {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.form__name, .form__phonenumber {
+  flex: 1 1 262px;
+  transition: border 0.3s;
+}
+.form__name:focus, .form__phonenumber:focus {
+  border: 2px solid #faa52e;
+}
+.form__message {
+  flex: 1 0 100%;
+  min-height: 128px;
+  transition: border 0.3s;
+}
+.form__message:focus {
+  border: 2px solid #faa52e;
+}
+.form__button {
+  flex: 1 0 0;
+  padding: 16px 32px;
+  background: #faa52e;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  color: #ffffff;
+  transition: box-shadow 0.3s;
+  max-width: 323px;
+}
+.form__button:hover {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3647058824);
+}
+.form__button:active {
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3647058824);
+}
+
 /* ---------- header ---------- */
 .header {
   position: absolute;
@@ -456,3 +515,66 @@ h1, h2, h3, h4, h5, h6 {
 .credit {
   padding: 96px 0;
 }
+
+/* =================================== help =================================== */
+.help {
+  padding: 96px 0;
+}
+.help__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.help__content {
+  max-width: 548px;
+}
+.help__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 122%;
+  letter-spacing: -0.02em;
+  color: #101828;
+  margin-bottom: 8px;
+}
+.help__caption {
+  font-size: 20px;
+  line-height: 150%;
+  color: #667085;
+  margin-bottom: 48px;
+  max-width: 474px;
+}
+.help__images {
+  position: relative;
+  overflow: hidden;
+  flex: 0 0 664px;
+}
+.help__images::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 85.89%, #ffffff 100%), linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 12.63%);
+}
+.help__images-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+}
+.help__images-row:not(:last-child) {
+  margin-bottom: 11px;
+}
+.help__image {
+  flex: 0 0 144px;
+  height: 144px;
+  background: #f2f4f7;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- media quaries ---------- */

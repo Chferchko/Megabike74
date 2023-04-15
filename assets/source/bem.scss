@@ -94,12 +94,12 @@
 		font-weight: 500;
 		font-size: 20px;
 		line-height: 120%;
-		transition: box-shadow .3s;
+		transition: box-shadow 0.3s;
 		&::after {
 			content: "";
 			width: 24px;
 		}
-		&:hover{
+		&:hover {
 			box-shadow: 0 0 10px 0 #0000005d;
 		}
 	}
@@ -281,5 +281,49 @@
 		font-size: 16px;
 		line-height: 150%;
 		color: #101828;
+	}
+}
+
+.form {
+	display: flex;
+	gap: 24px;
+	flex-wrap: wrap;
+	&__name,
+	&__phonenumber {
+		flex: 1 1 262px;
+		@extend %form-element;
+		transition: border 0.3s;
+		&:focus {
+			border: 2px solid #faa52e;
+		}
+	}
+
+	&__message {
+		flex: 1 0 100%;
+		@extend %form-element;
+		min-height: 128px;
+		transition: border 0.3s;
+		&:focus {
+			border: 2px solid #faa52e;
+		}
+	}
+
+	&__button {
+		flex: 1 0 0;
+		padding: 16px 32px;
+		background: #faa52e;
+		border-radius: 12px;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 120%;
+		color: #ffffff;
+		transition: box-shadow 0.3s;
+		max-width: 323px;
+		&:hover {
+			box-shadow: 0 0 10px 0 #0000005d;
+		}
+		&:active {
+			box-shadow: 0 0 3px 0 #0000005d;
+		}
 	}
 }

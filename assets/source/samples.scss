@@ -10,3 +10,18 @@
 		object-fit: cover;
 	}
 }
+
+// ------------- Input
+%form-element {
+	padding: 16px;
+	background: #ffffff;
+	border: 2px solid #f2f4f7;
+	border-radius: 12px;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 120%;
+	color: #98a2b3;
+	&::placeholder {
+		color: #98a2b3;
+	}
+}
