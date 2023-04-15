@@ -12,6 +12,7 @@
 
 /* =================================== intro =================================== */
 .intro {
+	padding-bottom: 96px;
 	&__banner {
 		margin-bottom: 64px;
 	}
@@ -50,6 +51,33 @@
 			background: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.83337 10.1666L10.1667 1.83331M10.1667 1.83331H1.83337M10.1667 1.83331V10.1666' stroke='%231D2939' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
 				center no-repeat;
 		}
+	}
+}
+
+.features {
+	padding: 96px 0;
+	&__title {
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 122%;
+		text-align: center;
+		letter-spacing: -0.02em;
+		color: #101828;
+		&:not(:last-child) {
+			margin-bottom: 48px;
+		}
+	}
+
+	&__cards {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -16px;
+		row-gap: 32px;
+	}
+
+	&__card {
+		flex: 0 1 33.333%;
+		padding: 0 16px;
 	}
 }
 
