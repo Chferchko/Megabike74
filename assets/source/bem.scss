@@ -1,5 +1,4 @@
 /* ---------- bem blocks ---------- */
-
 .banner {
 	display: flex;
 	align-items: center;
@@ -108,5 +107,60 @@
 	&__image {
 		@extend %adapt-img;
 		padding-bottom: 37%;
+	}
+}
+
+.catalog {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(316px, 1fr));
+	grid-auto-rows: minmax(256px, 1fr);
+	gap: 32px;
+	&__card {
+		display: inline-flex;
+		align-items: flex-end;
+		position: relative;
+		padding: 0 24px 24px;
+		background: #f9fafb;
+		border-radius: 20px;
+		overflow: hidden;
+		transition: box-shadow 0.3s;
+		&:hover {
+			box-shadow: 0 0 20px 0 #0000005d;
+			.catalog__card-image {
+				img {
+					transform: scale(1.05);
+					transform-origin: top right;
+				}
+			}
+		}
+		&_big {
+			grid-column: span 2;
+			&:hover {
+				.catalog__card-image {
+					img {
+						transform: scale(1.05);
+						transform-origin: bottom right;
+					}
+				}
+			}
+		}
+	}
+
+	&__card-title {
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 133%;
+		color: #101828;
+	}
+
+	&__card-image {
+		@extend %adapt-img;
+		position: static;
+		top: 0;
+		right: 0;
+		padding-bottom: 37%;
+		img {
+			transition: transform 0.3s, transform-origin 0.3s;
+		}
 	}
 }
