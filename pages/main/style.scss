@@ -1,14 +1,10 @@
-@import "../../assets/source/support-styles.scss";
 @import "../../assets/source/mixins.scss";
 @import "../../assets/source/samples.scss";
+@import "../../assets/source/support-styles.scss";
 @import "../../assets/source/null-styles.scss";
 @import "../../assets/source/bem.scss";
 @import "../../assets/source/header.scss";
 @import "../../assets/source/footer.scss";
-
-.main {
-	padding: 224px 0 0;
-}
 
 /* =================================== intro =================================== */
 .intro {
@@ -54,6 +50,7 @@
 	}
 }
 
+/* =================================== features =================================== */
 .features {
 	padding: 96px 0;
 	&__title {
@@ -79,6 +76,12 @@
 		flex: 0 1 33.333%;
 		padding: 0 16px;
 	}
+}
+
+/* =================================== installment % credit =================================== */
+.installment,
+.credit {
+	padding: 96px 0;
 }
 
 @import "../../assets/source/media.scss";
