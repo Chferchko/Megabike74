@@ -171,8 +171,9 @@ h1, h2, h3, h4, h5, h6 {
 .banner_winter .banner__button::after {
   background: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 11L11 1M11 1H1M11 1V11' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center no-repeat;
 }
-.banner_winter .banner__image {
-  flex: 1 0 52%;
+.banner_winter .banner__image img {
+  width: 127%;
+  height: 130%;
 }
 .banner_summer {
   background: url(../../assets/images/main/banner/summer-gradient.png) center no-repeat;
@@ -194,11 +195,12 @@ h1, h2, h3, h4, h5, h6 {
 .banner_summer .banner__button::after {
   background: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 11L11 1M11 1H1M11 1V11' stroke='%23EF9415' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center no-repeat;
 }
-.banner_summer .banner__image {
-  flex: 1 0 48%;
+.banner_summer .banner__image img {
+  width: 135%;
+  height: 120%;
 }
 .banner__content {
-  flex: 1 1 50%;
+  flex: 1 0 50%;
   padding-left: 48px;
 }
 .banner__title {
@@ -228,6 +230,7 @@ h1, h2, h3, h4, h5, h6 {
 .banner__button {
   max-width: 192px;
   display: flex;
+  justify-content: center;
   padding: 16px 32px;
   gap: 12px;
   border-radius: 12px;
@@ -243,8 +246,12 @@ h1, h2, h3, h4, h5, h6 {
 .banner__button:hover {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3647058824);
 }
+.banner__flex-image {
+  flex: 1 0 50%;
+  max-height: 512px;
+}
 .banner__image {
-  padding-bottom: 37%;
+  padding-bottom: 75%;
 }
 
 .catalog {
@@ -860,3 +867,62 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ---------- media quaries ---------- */
+@media (max-width: 991px) {
+  .banner__title {
+    padding: 4px 12px;
+    gap: 4px;
+    font-size: 16px;
+    height: 32px;
+  }
+  .banner__text {
+    font-size: 20px;
+  }
+  .banner_winter .banner__title {
+    max-width: 206px;
+  }
+  .banner_summer .banner__title {
+    max-width: 203px;
+  }
+}
+@media (max-width: 767px) {
+  .banner {
+    min-height: 250px !important;
+    padding: 16px;
+  }
+  .banner__content {
+    padding-left: 0;
+  }
+}
+@media (max-width: 575px) {
+  .banner {
+    height: 490px !important;
+  }
+  .banner__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .banner__text {
+    flex-grow: 1;
+  }
+  .banner__flex-image {
+    display: none;
+  }
+  .banner__button {
+    max-width: 100%;
+  }
+  .banner_winter {
+    background: url(../../assets/images/main/banner/winter.png) center 65%/auto 59% no-repeat, url(../../assets/images/main/banner/winter-gradient.png) center no-repeat;
+  }
+  .banner_summer {
+    background: url(../../assets/images/main/banner/summer.png) center 54%/auto 62% no-repeat, url(../../assets/images/main/banner/summer-gradient.png) center no-repeat;
+  }
+}
+@media (max-width: 425px) {
+  .banner_winter {
+    background: url(../../assets/images/main/banner/winter.png) 9% 65%/auto 59% no-repeat, url(../../assets/images/main/banner/winter-gradient.png) center no-repeat;
+  }
+  .banner_summer {
+    background: url(../../assets/images/main/banner/summer.png) 12% 54%/auto 62% no-repeat, url(../../assets/images/main/banner/summer-gradient.png) center no-repeat;
+  }
+}

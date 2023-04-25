@@ -3,10 +3,79 @@
 }
 
 @media (max-width: 991px) {
+	.banner {
+		&__content {
+		}
+		&__title {
+			padding: 4px 12px;
+			gap: 4px;
+			font-size: 16px;
+			height: 32px;
+		}
+		&__text {
+			font-size: 20px;
+		}
+		&_winter {
+			.banner__title {
+				max-width: 206px;
+			}
+		}
+		&_summer {
+			.banner__title {
+				max-width: 203px;
+			}
+		}
+	}
 }
 
 @media (max-width: 767px) {
+	.banner {
+		min-height: 250px !important;
+		padding: 16px;
+		&__content {
+			padding-left: 0;
+		}
+	}
 }
 
 @media (max-width: 575px) {
+	.banner {
+		height: 490px !important;
+		&__content {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+		}
+		&__text {
+			flex-grow: 1;
+		}
+		&__flex-image {
+			display: none;
+		}
+		&__button {
+			max-width: 100%;
+		}
+		&_winter {
+			background: url(../../assets/images/main/banner/winter.png) center 65%/auto 59% no-repeat,
+				url(../../assets/images/main/banner/winter-gradient.png) center no-repeat;
+		}
+		&_summer {
+			background: url(../../assets/images/main/banner/summer.png) center 54%/auto 62% no-repeat,
+				url(../../assets/images/main/banner/summer-gradient.png) center no-repeat;
+		}
+	}
+}
+
+@media (max-width: 425px){
+	.banner {
+		&_winter {
+			background: url(../../assets/images/main/banner/winter.png) 9% 65%/auto 59% no-repeat,
+				url(../../assets/images/main/banner/winter-gradient.png) center no-repeat;
+		}
+		&_summer {
+			background: url(../../assets/images/main/banner/summer.png) 12% 54%/auto 62% no-repeat,
+				url(../../assets/images/main/banner/summer-gradient.png) center no-repeat;
+		}
+	}
+	  
 }

@@ -7,7 +7,8 @@ var swiper = new Swiper(".intro__banner-slider", {
 	autoplay: { // автопрокрутка
 		delay: 5000, // задержка автопрокрутки
 		stopOnLastSlide: false, // остановка на последнем слайде
-		disableOnInteraction: false, // остановка после ручного воздействия на слайдер
+		disableOnInteraction: true, // остановка после ручного воздействия на слайдер
 	},
 	speed: 1500, // скорость смены слайда
+	simulateTouch: true, // перетаскивание на пк
 });
