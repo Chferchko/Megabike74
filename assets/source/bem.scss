@@ -267,6 +267,9 @@
 		&:hover {
 			box-shadow: 0 0 10px 0 #0000005d;
 		}
+		&_mobile {
+			display: none;
+		}
 	}
 
 	&__illustration {
@@ -277,11 +280,12 @@
 
 	&__image {
 		margin-bottom: 32px;
+		min-width: 480px;
 	}
 
 	&__tags {
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		justify-content: center;
 		gap: 12px;
 	}
