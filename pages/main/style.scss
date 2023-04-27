@@ -178,6 +178,9 @@
 		img {
 			border-radius: 20px;
 		}
+		&_mobile {
+			display: none;
+		}
 	}
 
 	&__location {
@@ -204,6 +207,9 @@
 		}
 		&:hover {
 			box-shadow: 0 0 10px 0 #0000005d;
+		}
+		&_mobile {
+			display: none;
 		}
 	}
 

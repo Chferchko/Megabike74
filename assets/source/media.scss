@@ -10,6 +10,9 @@
 	.about {
 		padding: 40px 0;
 	}
+	.main {
+		padding: 224px 0 60px;
+	}
 	.banner {
 		&__title {
 			padding: 4px 12px;
@@ -58,6 +61,26 @@
 			font-size: 16px;
 			margin-bottom: 20px;
 			max-width: 100%;
+		}
+	}
+	.about {
+		&__title {
+			font-size: 24px;
+		}
+		&__caption {
+			font-size: 30px;
+			margin-bottom: 8px;
+		}
+		&__text {
+			font-size: 16px;
+		}
+		&__location {
+			display: none;
+			&_mobile {
+				display: flex;
+				right: auto;
+				left: 16px;
+			}
 		}
 	}
 }
@@ -125,6 +148,7 @@
 		}
 		&__images {
 			display: none;
+			max-width: 100%;
 			&_mobile {
 				display: block;
 				margin-bottom: 20px;
@@ -132,6 +156,29 @@
 		}
 		.form {
 			justify-content: center;
+		}
+	}
+	.about {
+		&__image {
+			display: none;
+			padding-bottom: 95%;
+			&_mobile {
+				display: block;
+				margin-bottom: 20px;
+			}
+		}
+		&__info {
+			flex: 1 1 606px;
+		}
+		&__tags {
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+		&__button {
+			display: block;
+			width: 160px;
+			margin: 0px auto;
 		}
 	}
 }
@@ -252,6 +299,12 @@
 	.form {
 		&__button {
 			max-width: 100%;
+		}
+	}
+	.about {
+		&__button {
+			width: 100%;
+			text-align: center;
 		}
 	}
 }
