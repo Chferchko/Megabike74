@@ -747,7 +747,8 @@ h1, h2, h3, h4, h5, h6 {
 .help__images {
   position: relative;
   overflow: hidden;
-  flex: 0 0 664px;
+  flex: 1 0 50%;
+  max-width: 664px;
 }
 .help__images::before {
   position: absolute;
@@ -756,6 +757,10 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   z-index: 2;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0) 85.89%, #ffffff 100%), linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 12.63%);
+}
+.help__images_mobile {
+  display: none;
+  flex: 1 0 100%;
 }
 .help__images-row {
   display: flex;
@@ -914,6 +919,18 @@ h1, h2, h3, h4, h5, h6 {
   .conditions__image {
     min-width: 0;
   }
+  .help__content {
+    max-width: 100%;
+  }
+  .help__title {
+    font-size: 30px;
+    margin-bottom: 4px;
+  }
+  .help__caption {
+    font-size: 16px;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
 }
 @media (max-width: 767px) {
   .intro {
@@ -962,6 +979,23 @@ h1, h2, h3, h4, h5, h6 {
   }
   .credit .conditions {
     flex-wrap: wrap-reverse;
+  }
+  .help__body {
+    display: block;
+  }
+  .help__content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .help__images {
+    display: none;
+  }
+  .help__images_mobile {
+    display: block;
+    margin-bottom: 20px;
+  }
+  .help .form {
+    justify-content: center;
   }
 }
 @media (max-width: 575px) {
@@ -1050,6 +1084,16 @@ h1, h2, h3, h4, h5, h6 {
   .installment .conditions__button_mobile,
   .credit .conditions__button_mobile {
     flex: 1 0 100%;
+  }
+  .help__image {
+    flex: 1 0 96px;
+    height: 96px;
+  }
+  .help__image img {
+    height: 85%;
+  }
+  .form__button {
+    max-width: 100%;
   }
 }
 @media (max-width: 425px) {

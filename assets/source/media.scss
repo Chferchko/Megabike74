@@ -46,6 +46,20 @@
 			min-width: 0;
 		}
 	}
+	.help {
+		&__content {
+			max-width: 100%;
+		}
+		&__title {
+			font-size: 30px;
+			margin-bottom: 4px;
+		}
+		&__caption {
+			font-size: 16px;
+			margin-bottom: 20px;
+			max-width: 100%;
+		}
+	}
 }
 
 @media (max-width: 767px) {
@@ -99,6 +113,25 @@
 	.credit {
 		.conditions {
 			flex-wrap: wrap-reverse;
+		}
+	}
+	.help {
+		&__body {
+			display: block;
+		}
+		&__content {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		&__images {
+			display: none;
+			&_mobile {
+				display: block;
+				margin-bottom: 20px;
+			}
+		}
+		.form {
+			justify-content: center;
 		}
 	}
 }
@@ -205,6 +238,20 @@
 			&__button_mobile {
 				flex: 1 0 100%;
 			}
+		}
+	}
+	.help {
+		&__image {
+			flex: 1 0 96px;
+			height: 96px;
+			img {
+				height: 85%;
+			}
+		}
+	}
+	.form {
+		&__button {
+			max-width: 100%;
 		}
 	}
 }
