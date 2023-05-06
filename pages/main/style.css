@@ -268,14 +268,18 @@ h1, h2, h3, h4, h5, h6 {
   background: #f9fafb;
   border-radius: 20px;
   overflow: hidden;
-  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, background 0.3s;
 }
 .catalog__card:hover {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3647058824);
+  background: #faa52e;
 }
 .catalog__card:hover .catalog__card-image img {
   transform: scale(1.05);
   transform-origin: top right;
+}
+.catalog__card:hover .catalog__card-title {
+  color: #ffffff;
 }
 .catalog__card_big {
   grid-column: span 2;
@@ -289,6 +293,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 24px;
   line-height: 133%;
   color: #101828;
+  transition: color 0.3s;
 }
 .catalog__card-image {
   position: static;
@@ -460,9 +465,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contacts {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 32px;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
 }
 .contacts__number {
   position: relative;
@@ -1043,6 +1049,18 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     width: 160px;
     margin: 0px auto;
+  }
+  .contacts__number {
+    font-weight: 400;
+    font-size: 18px;
+    padding: 12px 0;
+  }
+  .footer__body {
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .footer__contacts {
+    flex-direction: column;
   }
 }
 @media (max-width: 575px) {

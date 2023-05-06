@@ -135,14 +135,18 @@
 		background: #f9fafb;
 		border-radius: 20px;
 		overflow: hidden;
-		transition: box-shadow 0.3s;
+		transition: box-shadow 0.3s, background 0.3s;
 		&:hover {
 			box-shadow: 0 0 20px 0 #0000005d;
+			background: #faa52e;
 			.catalog__card-image {
 				img {
 					transform: scale(1.05);
 					transform-origin: top right;
 				}
+			}
+			.catalog__card-title {
+				color: #ffffff;
 			}
 		}
 		&_big {
@@ -163,6 +167,7 @@
 		font-size: 24px;
 		line-height: 133%;
 		color: #101828;
+		transition: color 0.3s;
 	}
 
 	&__card-image {
@@ -358,9 +363,9 @@
 }
 
 .contacts {
-	display: flex;
+	display: inline-flex;
 	align-items: center;
-	gap: 32px;
+	column-gap: 32px;
 	&__number {
 		position: relative;
 		display: flex;

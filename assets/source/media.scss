@@ -181,6 +181,22 @@
 			margin: 0px auto;
 		}
 	}
+	.contacts {
+		&__number {
+			font-weight: 400;
+			font-size: 18px;
+			padding: 12px 0;
+		}
+	}
+	.footer {
+		&__body {
+			gap: 24px;
+			flex-wrap: wrap;
+		}
+		&__contacts {
+			flex-direction: column;
+		}
+	}
 }
 
 @media (max-width: 575px) {
