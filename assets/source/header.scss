@@ -12,13 +12,6 @@
 		align-items: center;
 		justify-content: space-between;
 		margin-bottom: 16px;
-		gap: 48px;
-	}
-
-	&__main {
-		flex: 1 1 1053px;
-		display: flex;
-		align-items: center;
 		gap: 24px;
 	}
 
@@ -34,6 +27,9 @@
 		line-height: 120%;
 		color: #ffffff;
 		transition: box-shadow 0.3s;
+		&:not(:first-child) {
+			margin-left: 24px;
+		}
 		&::before {
 			content: "";
 			width: 24px;

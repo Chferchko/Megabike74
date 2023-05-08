@@ -517,12 +517,6 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 16px;
-  gap: 48px;
-}
-.header__main {
-  flex: 1 1 1053px;
-  display: flex;
-  align-items: center;
   gap: 24px;
 }
 .header__catalog-button {
@@ -537,6 +531,9 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 120%;
   color: #ffffff;
   transition: box-shadow 0.3s;
+}
+.header__catalog-button:not(:first-child) {
+  margin-left: 24px;
 }
 .header__catalog-button::before {
   content: "";
