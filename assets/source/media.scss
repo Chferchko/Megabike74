@@ -1,8 +1,5 @@
 /* ---------- media quaries ---------- */
-@media (min-width: 769px) {
-}
-
-@media (max-width: 991px) {
+@media (max-width: 993px) {
 	.features,
 	.installment,
 	.credit,
@@ -83,9 +80,35 @@
 			}
 		}
 	}
+	.header {
+		&__catalog-button {
+			display: none;
+		}
+		&__contacts {
+			.contacts__number {
+				font-weight: 400;
+				font-size: 18px;
+				padding: 12px 0;
+			}
+		}
+	}
 }
 
-@media (max-width: 767px) {
+@media (max-width: 769px) {
+	body.lock {
+		overflow: hidden;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: rgba(29, 41, 57, 0.5);
+			z-index: 2;
+		}
+	}
+	.main {
+		padding: 154px 0 60px;
+	}
 	.intro {
 		padding-bottom: 40px;
 	}
@@ -188,6 +211,118 @@
 			padding: 12px 0;
 		}
 	}
+	.header {
+		min-height: auto;
+		&__top {
+			margin-bottom: 0;
+			position: relative;
+		}
+		&__menu-button {
+			display: block;
+		}
+		&__logo {
+			position: absolute;
+			top: 50%;
+			left: 43.5%;
+			transform: translate(-50%, -50%);
+		}
+		&__search-form {
+			position: absolute;
+			right: 56px;
+			border: none;
+			flex: 0 1 0;
+			gap: 0;
+			padding: 16px;
+			cursor: pointer;
+			&::before {
+				background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 19L13.0001 13M15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8Z' stroke='%231D2939' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+					center no-repeat;
+			}
+			&:hover {
+				box-shadow: none;
+				&::before {
+					transform: scale(1.3);
+				}
+			}
+		}
+		&__search,
+		&__search-button {
+			display: none;
+		}
+		&__bottom {
+			position: fixed;
+			width: 100%;
+			top: -130%;
+			left: 0;
+			flex-direction: column-reverse;
+			align-items: flex-start;
+			justify-content: flex-end;
+			background: #ffffff;
+			z-index: 2;
+			box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+			transition: top 0.5s;
+			&.open {
+				top: 0;
+			}
+		}
+		&__menu-closer {
+			display: block;
+			position: absolute;
+			top: 10px;
+			right: 16px;
+			content: "";
+			width: 44px;
+			height: 44px;
+			background: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 1L1 11M1 1L11 11' stroke='%23101828' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+				center no-repeat;
+			transition: transform 0.3s;
+			cursor: pointer;
+		}
+		&__contacts {
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 24px 16px;
+			&::before {
+				content: "Звоните нам";
+				display: block;
+				font-weight: 700;
+				font-size: 24px;
+				line-height: 133%;
+				color: #101828;
+				margin-bottom: 8px;
+			}
+		}
+		&__menu {
+			width: 100%;
+			&::before {
+				display: block;
+				content: "Меню";
+				width: 100%;
+				padding: 16px;
+				font-weight: 700;
+				font-size: 24px;
+				line-height: 133%;
+				color: #101828;
+			}
+		}
+		&__menu-list {
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 24px 16px;
+			border-top: 1px solid #eaecf0;
+			border-bottom: 1px solid #eaecf0;
+		}
+		&__basket {
+			background: none;
+			path {
+				stroke: #1d2939;
+			}
+			&:hover {
+				box-shadow: none;
+				transform: scale(1.3);
+			}
+		}
+	}
 	.footer {
 		&__body {
 			gap: 24px;
@@ -199,7 +334,10 @@
 	}
 }
 
-@media (max-width: 575px) {
+@media (max-width: 577px) {
+	.main {
+		padding: 90px 0 60px;
+	}
 	.intro {
 		&__categories-header {
 			margin-bottom: 32px;
@@ -323,9 +461,26 @@
 			text-align: center;
 		}
 	}
+	.header {
+		padding: 10px 0;
+		.logo {
+			&__label {
+				font-size: 25px;
+			}
+			&__image {
+				img {
+					width: 37px;
+					height: 36px;
+				}
+			}
+		}
+	}
 }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
+	.main {
+		padding: 78px 0 60px;
+	}
 	.banner {
 		&_winter {
 			background: url(../../assets/images/main/banner/winter.png) 9% 65% / auto 59% no-repeat,
@@ -356,9 +511,60 @@
 			}
 		}
 	}
+	.header {
+		&__menu-button {
+			width: 17px;
+			height: 2px;
+			&::before,
+			&::after {
+				width: 17px;
+				height: 2px;
+			}
+			&::before {
+				top: -5px;
+			}
+			&::after {
+				top: 5px;
+			}
+		}
+		&__search-form {
+			min-height: auto;
+			padding: 12px;
+			right: 40px;
+			&::before {
+				width: 15px;
+				height: 15px;
+				background: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 19L13.0001 13M15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8Z' stroke='%231D2939' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+					center no-repeat;
+			}
+		}
+		&__basket {
+			width: auto;
+			height: auto;
+			padding: 12px;
+			svg {
+				width: 16px;
+				height: 16px;
+			}
+		}
+		.logo {
+			&__label {
+				font-size: 17px;
+			}
+			&__image {
+				img {
+					width: 27px;
+					height: 26px;
+				}
+			}
+		}
+		&__bottom {
+			height: 100%;
+		}
+	}
 }
 
-@media (max-width: 375px) {
+@media (max-width: 376px) {
 	.features {
 		&__card {
 			flex: 0 1 100%;
