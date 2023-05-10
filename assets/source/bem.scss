@@ -7,7 +7,6 @@
 	&_winter {
 		background: url(../../assets/images/main/banner/winter-gradient.png) center no-repeat;
 		.banner__title {
-			max-width: 238px;
 			color: #fcfcfd;
 			&::after {
 				background: url(../../assets/images/main/icon/snowflake.png) center no-repeat;
@@ -35,7 +34,6 @@
 	&_summer {
 		background: url(../../assets/images/main/banner/summer-gradient.png) center no-repeat;
 		.banner__title {
-			max-width: 234px;
 			color: #101828;
 			&::after {
 				background: url(../../assets/images/main/icon/sun.png) center no-repeat;
@@ -69,7 +67,7 @@
 		height: 44px;
 		padding: 8px 16px;
 		margin-bottom: 8px;
-		display: flex;
+		display: inline-flex;
 		gap: 8px;
 		font-size: 18px;
 		line-height: 156%;

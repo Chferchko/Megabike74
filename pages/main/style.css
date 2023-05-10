@@ -155,7 +155,6 @@ h1, h2, h3, h4, h5, h6 {
   background: url(../../assets/images/main/banner/winter-gradient.png) center no-repeat;
 }
 .banner_winter .banner__title {
-  max-width: 238px;
   color: #fcfcfd;
 }
 .banner_winter .banner__title::after {
@@ -179,7 +178,6 @@ h1, h2, h3, h4, h5, h6 {
   background: url(../../assets/images/main/banner/summer-gradient.png) center no-repeat;
 }
 .banner_summer .banner__title {
-  max-width: 234px;
   color: #101828;
 }
 .banner_summer .banner__title::after {
@@ -207,7 +205,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 44px;
   padding: 8px 16px;
   margin-bottom: 8px;
-  display: flex;
+  display: inline-flex;
   gap: 8px;
   font-size: 18px;
   line-height: 156%;
@@ -990,15 +988,10 @@ h1, h2, h3, h4, h5, h6 {
     gap: 4px;
     font-size: 16px;
     height: 32px;
+    align-self: flex-start;
   }
   .banner__text {
     font-size: 20px;
-  }
-  .banner_winter .banner__title {
-    max-width: 206px;
-  }
-  .banner_summer .banner__title {
-    max-width: 203px;
   }
   .conditions {
     min-height: 360px;

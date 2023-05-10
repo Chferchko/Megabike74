@@ -16,19 +16,10 @@
 			gap: 4px;
 			font-size: 16px;
 			height: 32px;
+			align-self: flex-start;
 		}
 		&__text {
 			font-size: 20px;
-		}
-		&_winter {
-			.banner__title {
-				max-width: 206px;
-			}
-		}
-		&_summer {
-			.banner__title {
-				max-width: 203px;
-			}
 		}
 	}
 	.conditions {
