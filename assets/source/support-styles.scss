@@ -8,6 +8,18 @@ html {
 
 body {
 	font-family: Roboto;
+	&::before {
+		content: "";
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: rgba(29, 41, 57, 0.5);
+		z-index: 2;
+		visibility: hidden;
+		opacity: 0;
+		transition: visibility 0.3s, opacity 0.3s;
+	}
 }
 
 .main {

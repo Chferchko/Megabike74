@@ -37,6 +37,18 @@ html {
 body {
   font-family: Roboto;
 }
+body::before {
+  content: "";
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(29, 41, 57, 0.5);
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s;
+}
 
 .main {
   padding: 224px 0 96px;
@@ -1052,12 +1064,8 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
   }
   body.lock::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(29, 41, 57, 0.5);
-    z-index: 2;
+    visibility: visible;
+    opacity: 1;
   }
   .main {
     padding: 154px 0 60px;
