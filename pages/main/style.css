@@ -1162,9 +1162,6 @@ h1, h2, h3, h4, h5, h6 {
   .header {
     min-height: auto;
   }
-  .header__container {
-    padding: 0 5px 0 16px;
-  }
   .header__top {
     margin-bottom: 0;
     position: relative;
@@ -1186,7 +1183,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
     cursor: pointer;
     width: 44px;
-    transition: transform 0.3s;
+    transition: transform 0.3s, width 0.3s, right 0.3s;
     background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 19L13.0001 13M15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8Z' stroke='%231D2939' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center no-repeat;
   }
   .header__search-form:hover {
@@ -1196,7 +1193,31 @@ h1, h2, h3, h4, h5, h6 {
   .header__search-form::before {
     display: none;
   }
-  .header__search, .header__search-button {
+  .header__search-form.active {
+    width: 100%;
+    right: 0;
+  }
+  .header__search-form.active:hover {
+    transform: scale(1);
+  }
+  .header__search-form.active .header__search {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #f2f4f7;
+    border-radius: 10px;
+    padding: 14px 12px;
+  }
+  .header__search-form.active:has(.header__search:focus) {
+    box-shadow: none;
+  }
+  .header__search {
+    display: none;
+  }
+  .header__search-button {
     display: none;
   }
   .header__bottom {
@@ -1408,9 +1429,6 @@ h1, h2, h3, h4, h5, h6 {
   .installment .conditions__tags,
   .credit .conditions__tags {
     flex-wrap: wrap-reverse;
-  }
-  .header__container {
-    padding: 0 4px 0 16px;
   }
   .header__menu-button {
     width: 17px;
