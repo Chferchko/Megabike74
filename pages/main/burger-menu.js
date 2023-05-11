@@ -10,7 +10,7 @@ function toggleLockClass() {
 	document.body.classList.toggle("lock");
 };
 
-function toggleMenuDisplay(e) {
+function toggleDisplayMenu(e) {
 	if (e.target == burger || e.target == closer_menu || document.body.classList.contains("lock") && !header_menu.contains(e.target)) {
 		toggleOpenClass();
 		toggleLockClass();
@@ -18,7 +18,7 @@ function toggleMenuDisplay(e) {
 };
 
 function clickHandler(e) {
-	toggleMenuDisplay(e);
+	toggleDisplayMenu(e);
 };
 
 document.addEventListener("click", clickHandler);
