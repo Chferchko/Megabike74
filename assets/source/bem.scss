@@ -22,6 +22,13 @@
 				background: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 11L11 1M11 1H1M11 1V11' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
 					center no-repeat;
 			}
+			&:hover {
+				background: #ef9415;
+			}
+			&:active {
+				background: #faa52e;
+				box-shadow: 0px 0px 0px 4px rgba(250, 165, 46, 0.25);
+			}
 		}
 		.banner__image {
 			img {
@@ -48,6 +55,13 @@
 			&::after {
 				background: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 11L11 1M11 1H1M11 1V11' stroke='%23EF9415' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
 					center no-repeat;
+			}
+			&:hover {
+				background: #f9fafb;
+			}
+			&:active {
+				background: #fff8ef;
+				box-shadow: 0px 0px 0px 4px rgba(208, 213, 221, 0.25);
 			}
 		}
 		.banner__image {
@@ -99,13 +113,10 @@
 		font-weight: 500;
 		font-size: 20px;
 		line-height: 120%;
-		transition: box-shadow 0.3s;
+		transition: background 0.3s, box-shadow 0.3s;
 		&::after {
 			content: "";
 			width: 24px;
-		}
-		&:hover {
-			box-shadow: 0 0 10px 0 #0000005d;
 		}
 	}
 
@@ -133,9 +144,8 @@
 		background: #f9fafb;
 		border-radius: 20px;
 		overflow: hidden;
-		transition: box-shadow 0.3s, background 0.3s;
+		transition: background 0.3s;
 		&:hover {
-			box-shadow: 0 0 20px 0 #0000005d;
 			background: #faa52e;
 			.catalog__card-image {
 				img {
@@ -259,7 +269,7 @@
 		font-size: 20px;
 		line-height: 120%;
 		color: #ef9415;
-		transition: box-shadow 0.3s;
+		transition: background 0.3s, box-shadow 0.3s;
 		&::after {
 			content: "";
 			width: 24px;
@@ -268,7 +278,11 @@
 				center no-repeat;
 		}
 		&:hover {
-			box-shadow: 0 0 10px 0 #0000005d;
+			background: #ffecd1;
+		}
+		&:active {
+			background: #fff8ef;
+			box-shadow: 0px 0px 0px 4px rgba(250, 165, 46, 0.25);
 		}
 		&_mobile {
 			display: none;
@@ -336,13 +350,14 @@
 		font-size: 20px;
 		line-height: 120%;
 		color: #ffffff;
-		transition: box-shadow 0.3s;
+		transition: background 0.3s, box-shadow 0.3s;
 		max-width: 323px;
 		&:hover {
-			box-shadow: 0 0 10px 0 #0000005d;
+			background: #ef9415;
 		}
 		&:active {
-			box-shadow: 0 0 3px 0 #0000005d;
+			background: #faa52e;
+			box-shadow: 0px 0px 0px 4px rgba(250, 165, 46, 0.25);
 		}
 	}
 }

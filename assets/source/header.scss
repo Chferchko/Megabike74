@@ -15,7 +15,6 @@
 		border-radius: 12px;
 		background: #1d2939;
 		position: relative;
-		transition: transform 0.3s;
 		&::before,
 		&::after {
 			position: absolute;
@@ -31,9 +30,6 @@
 		}
 		&::after {
 			top: 7px;
-		}
-		&:hover {
-			transform: scale(1.3);
 		}
 	}
 
@@ -56,7 +52,7 @@
 		font-size: 20px;
 		line-height: 120%;
 		color: #ffffff;
-		transition: box-shadow 0.3s;
+		transition: background 0.3s, box-shadow 0.3s;
 		&:not(:first-child) {
 			margin-left: 24px;
 		}
@@ -68,7 +64,11 @@
 				center no-repeat;
 		}
 		&:hover {
-			box-shadow: 0 0 10px 0 #0000005d;
+			background: #ef9415;
+		}
+		&:active {
+			background: #faa52e;
+			box-shadow: 0px 0px 0px 4px rgba(250, 165, 46, 0.25);
 		}
 	}
 
@@ -82,7 +82,7 @@
 		border: 1px solid #f2f4f7;
 		border-radius: 12px;
 		box-shadow: none;
-		transition: box-shadow 0.3s;
+		transition: border 0.3s;
 		&::before {
 			display: block;
 			flex-shrink: 0;
@@ -94,7 +94,7 @@
 			transition: transform 0.3s;
 		}
 		&:hover {
-			box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.02), 0px 2px 4px rgba(0, 0, 0, 0.08);
+			border: 1px solid #faa52e;
 		}
 		&:has(.header__search:focus),
 		&:has(.header__search:valid) {
@@ -103,7 +103,7 @@
 			}
 		}
 		&:has(.header__search:focus) {
-			box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.02), 0px 2px 4px rgba(0, 0, 0, 0.08);
+			border: 1px solid #faa52e;
 		}
 	}
 
@@ -147,9 +147,10 @@
 		pointer-events: none;
 		cursor: default;
 		transition: background 0.3s, color 0.3s, box-shadow 0.3s;
-		&:hover {
-			box-shadow: 0 0 5px 0 #0000005d;
-		}
+	}
+
+	&__search-cancel {
+		display: none;
 	}
 
 	&__search:valid + &__search-button {
@@ -157,6 +158,13 @@
 		color: #ffffff;
 		pointer-events: visible;
 		cursor: pointer;
+		&:hover {
+			background: #ef9415;
+		}
+		&:active {
+			background: #faa52e;
+			box-shadow: 0px 0px 0px 4px rgba(250, 165, 46, 0.25);
+		}
 	}
 
 	&__basket {
@@ -167,9 +175,13 @@
 		height: 56px;
 		background: #fff8ef;
 		border-radius: 12px;
-		transition: box-shadow 0.3s, transform 0.3s;
+		transition: background 0.3s, box-shadow 0.3s;
 		&:hover {
-			box-shadow: 0 0 10px 0 #0000005d;
+			background: #ffecd1;
+		}
+		&:active {
+			background: #fff8ef;
+			box-shadow: 0px 0px 0px 4px rgba(250, 165, 46, 0.25);
 		}
 	}
 
