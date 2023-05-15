@@ -20,7 +20,7 @@
 						<div class="logo__image"><img src="../../assets/images/main/logo.png" alt="logo"></div>
 						<h2 class="logo__label">МЕГАБАЙК74</h2>
 					</div>
-					<a href="" class="header__catalog-button">Каталог</a>
+					<span class="header__catalog-button" id="catalog-button">Каталог</span>
 					<form class="header__search-form" id="form" action="#" method="get">
 						<input class="header__search" id="search" type="search" name="search" placeholder="Поиск…"
 							pattern=".{1,}" required>
@@ -34,6 +34,56 @@
 								stroke="#EF9415" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 						</svg>
 					</a>
+					<div class="catalog-popup-wrapper" id="catalog">
+						<span class="catalog-popup-wrapper__block"></span>
+						<div class="catalog-popup">
+							<div class="catalog-popup__main-level popup-level">
+								<ul class="popup-level__list">
+									<li class="popup-level__item">
+										<h4 class="popup-level__item-title">Велосипеды</h4>
+									</li>
+									<li class="popup-level__item">
+										<h4 class="popup-level__item-title">Самокаты</h4>
+									</li>
+									<li class="popup-level__item">
+										<h4 class="popup-level__item-title">Мотоциклы</h4>
+									</li>
+									<li class="popup-level__item">
+										<h4 class="popup-level__item-title">Скейтборды и Лонгборды</h4>
+									</li>
+									<li class="popup-level__item">
+										<h4 class="popup-level__item-title">Запчасти для мотоциклов</h4>
+									</li>
+									<li class="popup-level__item">
+										<h4 class="popup-level__item-title">Запчасти для велосипедов</h4>
+									</li>
+									<li class="popup-level__item">
+										<h4 class="popup-level__item-title">Масло и смазка</h4>
+									</li>
+									<li class="popup-level__item">
+										<h4 class="popup-level__item-title">Аксессуары для мотоцикла</h4>
+									</li>
+									<li class="popup-level__item">
+										<h4 class="popup-level__item-title">Инструменты</h4>
+									</li>
+									<li class="popup-level__item">
+										<h4 class="popup-level__item-title">Акссесуары для велосипедов</h4>
+									</li>
+									<li class="popup-level__item">
+										<h4 class="popup-level__item-title">Экипировка</h4>
+									</li>
+									<li class="popup-level__item">
+										<h4 class="popup-level__item-title">Запчасти для самокатов</h4>
+									</li>
+									<li class="popup-level__item">
+										<h4 class="popup-level__item-title">Зимний ассортимент</h4>
+									</li>
+								</ul>
+							</div>
+							<div class="catalog-popup__second-level popup-level"></div>
+							<div class="catalog-popup__third-level popup-level"></div>
+						</div>
+					</div>
 				</div>
 				<div class="header__bottom" id="burger-menu">
 					<div class="header__contacts contacts">
@@ -432,5 +482,7 @@
 	<script src="slider.js"></script>
 	<script src="burger-menu.js"></script>
 	<script src="search-mobile.js"></script>
+	<script src="catalog-button.js"></script>
 </body>
+
 </html>
