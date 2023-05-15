@@ -10,7 +10,7 @@ function toggleStatusButtonClass() {
 };
 
 function toggleDisplayCatalog(e) {
-	if (e.target == catalog_button) {
+	if (e.target == catalog_button || catalog.classList.contains("visible") && !catalog.contains(e.target)) {
 		toggleVisibleClass();
 		toggleStatusButtonClass();
 	}

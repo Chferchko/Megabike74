@@ -522,22 +522,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .catalog-popup-wrapper {
-  visibility: hidden;
-  opacity: 0;
   position: absolute;
   top: 72px;
   left: 0px;
   width: 100%;
   display: flex;
-  z-index: 10;
-  transition: visibility 0.3s, opacity 0.3s;
 }
 .catalog-popup-wrapper__block {
   flex: 0 0 299px;
-}
-.catalog-popup-wrapper.visible {
-  visibility: visible;
-  opacity: 1;
 }
 
 .catalog-popup {
@@ -547,6 +539,14 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   filter: drop-shadow(0px 16px 128px rgba(0, 0, 0, 0.15));
   border-radius: 20px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s;
+  z-index: 10;
+}
+.catalog-popup.visible {
+  visibility: visible;
+  opacity: 1;
 }
 .catalog-popup__main-level {
   background: #f2f4f7;
